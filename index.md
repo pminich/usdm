@@ -34,3 +34,5 @@ This command will generate only the Python models and save them in the `./python
 openapi-generator-cli generate -i .\USDM_API.yaml -g python --global-property models -o .\python-models --skip-validate-spec
 openapi-generator-cli generate -i .\USDM_API.yaml -g typescript --global-property models -o .\ts-models --skip-validate-spec
 openapi-generator-cli generate -i .\USDM_API.yaml -g python-pydantic-v1 --global-property models -o .\python-pydantic-v1-models --skip-validate-spec
+
+openapi-generator-cli generate -i .\src\USDM-Model_openapi.yaml -g python-pydantic-v1 --global-property models -o .\datastructure-python-pydantic-v1-models --skip-validate-spec

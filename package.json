@@ -11,5 +11,10 @@
   "license": "ISC",
   "dependencies": {
     "@openapitools/openapi-generator-cli": "^2.15.3"
+  },
+  "devDependencies": {
+    "js-yaml": "^4.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
   }
 }

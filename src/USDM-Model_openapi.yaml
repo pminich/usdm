@@ -1,0 +1,3075 @@
+openapi: 3.0.3
+info:
+  title: USDM to OpenAPI
+  version: 1.0.0
+paths: {}
+components:
+  schemas:
+    Abbreviation:
+      type: object
+      description: >-
+        NCI C-Code: C42610
+
+        Definition: A set of letters that are drawn from a word or from a
+        sequence of words and that are used for brevity in place of the full
+        word or phrase. (CDISC Glossary)
+
+        Preferred Term: Abbreviation
+      properties:
+        id:
+          type: string
+        abbreviatedText:
+          type: string
+        expandedText:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - abbreviatedText
+        - expandedText
+    Activity:
+      type: object
+      description: >-
+        NCI C-Code: C71473
+
+        Definition: An action, undertaking, or event, which is anticipated to be
+        performed or observed, or was performed or observed, according to the
+        study protocol during the execution of the study.
+
+        Preferred Term: Study Activity
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        definedProcedures:
+          type: array
+          items:
+            type: string
+        biomedicalConcepts:
+          type: array
+          items:
+            type: string
+        next:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        timeline:
+          type: string
+        children:
+          type: array
+          items:
+            type: string
+        previous:
+          type: string
+        bcSurrogates:
+          type: array
+          items:
+            type: string
+        bcCategories:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+    Address:
+      type: object
+      description: >-
+        NCI C-Code: C25407
+
+        Definition: A standardized representation of the location of a person,
+        business, building, or organization. (NCI)
+
+        Preferred Term: Address
+      properties:
+        id:
+          type: string
+        text:
+          type: string
+        lines:
+          type: string
+        district:
+          type: string
+        city:
+          type: string
+        postalCode:
+          type: string
+        state:
+          type: string
+        country:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - text
+        - lines
+        - district
+        - city
+        - postalCode
+        - state
+    AdministrableProduct:
+      type: object
+      description: >-
+        NCI C-Code: CNEW
+
+        Definition: Any study product that is formulated and presented in the
+        form that is suitable for administration to a study participant.
+
+        Preferred Term: Administrable Product
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        productDesignation:
+          type: string
+        administrableDoseForm:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        pharmacologicClass:
+          type: string
+        identifiers:
+          type: array
+          items:
+            type: string
+        properties:
+          type: array
+          items:
+            type: string
+        sourcing:
+          type: string
+        ingredients:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - productDesignation
+        - administrableDoseForm
+    AdministrableProductIdentifier:
+      type: object
+      description: >-
+        NCI C-Code: CNEW
+
+        Definition: A sequence of characters used to identify, name, or
+        characterize the administrable product.
+
+        Preferred Term: Administrable Product Identifier
+      properties:
+        id:
+          type: string
+        text:
+          type: string
+        scope:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - text
+        - scope
+    AdministrableProductProperty:
+      type: object
+      description: >-
+        NCI C-Code: CNEW
+
+        Definition: A characteristic from a set of characteristics used to
+        define an administrable product.
+
+        Preferred Term: Administrable Product Property
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        text:
+          type: string
+        type:
+          type: string
+        quantity:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - text
+        - type
+    Administration:
+      type: object
+      description: >-
+        NCI C-Code: C25409
+
+        Definition: The act of dispensing, applying, or tendering a product,
+        agent, or therapy.
+
+        Preferred Term: Administration
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        administrableProduct:
+          type: string
+        route:
+          type: string
+        dose:
+          type: string
+        frequency:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        duration:
+          type: string
+        medicalDevice:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - duration
+    AdministrationDuration:
+      type: object
+      description: >-
+        NCI C-Code: C69282
+
+        Definition: The amount of time elapsed during the administration of an
+        agent.
+
+        Preferred Term: Administration Duration
+      properties:
+        id:
+          type: string
+        description:
+          type: string
+        durationWillVary:
+          type: string
+        reasonDurationWillVary:
+          type: string
+        quantity:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - description
+        - durationWillVary
+        - reasonDurationWillVary
+    AliasCode:
+      type: object
+      description: >-
+        NCI C-Code: C201344
+
+        Definition: An alternative symbol or combination of symbols which is
+        assigned to the members of a collection.
+
+        Preferred Term: Alias Code
+      properties:
+        id:
+          type: string
+        standardCode:
+          type: string
+        standardCodeAliases:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - standardCode
+    AnalysisPopulation:
+      type: object
+      description: >-
+        NCI C-Code: C188814
+
+        Definition: A target study population on which an analysis is performed.
+        These may be represented by the entire study population, a subgroup
+        defined by a particular characteristic measured at baseline, or a
+        principal stratum defined by the occurrence (or non-occurrence,
+        depending on context) of a specific intercurrent event. (ICH E9 R1
+        Addendum)
+
+        Preferred Term: Analysis Population
+      properties:
+        id:
+          type: string
+        text:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        subsetOf:
+          type: array
+          items:
+            type: string
+        notes:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - text
+        - name
+        - description
+        - label
+    AssignedPerson:
+      type: object
+      description: >-
+        NCI C-Code: CNEW
+
+        Definition: An individual person who is allotted or appointed to a
+        particular role, function, or other entity.
+
+        Preferred Term: Assigned Person
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        jobTitle:
+          type: string
+        organization:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - jobTitle
+    BiomedicalConcept:
+      type: object
+      description: >-
+        NCI C-Code: C201345
+
+        Definition: A unit of biomedical knowledge created from a unique
+        combination of characteristics that include implementation details like
+        variables and terminologies, used as building blocks for standardized,
+        hierarchically structured clinical research information.
+
+        Preferred Term: Biomedical Concept
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        label:
+          type: string
+        synonyms:
+          type: string
+        reference:
+          type: string
+        code:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        properties:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - label
+        - synonyms
+        - reference
+        - code
+    BiomedicalConceptCategory:
+      type: object
+      description: >-
+        NCI C-Code: C201346
+
+        Definition: A grouping of biomedical concepts based on some commonality
+        or by user defined characteristics.
+
+        Preferred Term: Biomedical Concept Category
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        code:
+          type: string
+        members:
+          type: array
+          items:
+            type: string
+        children:
+          type: array
+          items:
+            type: string
+        notes:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+    BiomedicalConceptProperty:
+      type: object
+      description: >-
+        NCI C-Code: C202493
+
+        Definition: A characteristic from a set of characteristics used to
+        define a biomedical concept.
+
+        Preferred Term: Biomedical Concept Property
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        label:
+          type: string
+        isRequired:
+          type: string
+        isEnabled:
+          type: string
+        datatype:
+          type: string
+        code:
+          type: string
+        responseCodes:
+          type: array
+          items:
+            type: string
+        notes:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - label
+        - isRequired
+        - isEnabled
+        - datatype
+        - code
+    BiomedicalConceptSurrogate:
+      type: object
+      description: >-
+        NCI C-Code: C207590
+
+        Definition: A concept that substitutes for a standard biomedical concept
+        from the designated source.
+
+        Preferred Term: Biomedical Concept Surrogate
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        reference:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - reference
+    BiospecimenRetention:
+      type: object
+      description: >-
+        NCI C-Code: CNEW
+
+        Definition: The continued possession, cataloging, and storage of
+        collected biological specimens beyond their initial use.
+
+        Preferred Term: Biospecimen Retention
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        isRetained:
+          type: string
+        includesDNA:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - isRetained
+        - includesDNA
+    Characteristic:
+      type: object
+      description: >-
+        NCI C-Code: C25447
+
+        Definition: The distinguishing qualities or prominent aspects of an
+        entity.
+
+        Preferred Term: Characteristic
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        text:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        dictionary:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - text
+    Code:
+      type: object
+      description: >-
+        NCI C-Code: C25162
+
+        Definition: A symbol or combination of symbols which is assigned to the
+        members of a collection.
+
+        Preferred Term: Code
+      properties:
+        id:
+          type: string
+        code:
+          type: string
+        codeSystem:
+          type: string
+        codeSystemVersion:
+          type: string
+        decode:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - code
+        - codeSystem
+        - codeSystemVersion
+        - decode
+    CommentAnnotation:
+      type: object
+      description: >-
+        NCI C-Code: C44272
+
+        Definition: An explanatory or critical comment, or other in-context
+        information (e.g., pattern, motif, link), that has been associated with
+        data or other types of information.
+
+        Preferred Term: Comment Annotation
+      properties:
+        id:
+          type: string
+        text:
+          type: string
+        codes:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - text
+    Condition:
+      type: object
+      description: |-
+        NCI C-Code: C25457
+        Definition: A state of being.
+        Preferred Term: Condition
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        text:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        dictionary:
+          type: string
+        context:
+          type: array
+          items:
+            type: string
+        appliesTo:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - text
+    ConditionAssignment:
+      type: object
+      description: >-
+        NCI C-Code: C201335
+
+        Definition: An allotting or appointment to a condition or set of
+        conditions that are to be met in order to make a logical decision.
+
+        Preferred Term: Condition Assignment
+      properties:
+        id:
+          type: string
+        condition:
+          type: string
+        conditionTarget:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - condition
+        - conditionTarget
+    DocumentContentReference:
+      type: object
+      description: >-
+        NCI C-Code: CNEW
+
+        Definition: A citation pointing to the location of specific content
+        within a document.
+
+        Preferred Term: Document Content Reference
+      properties:
+        id:
+          type: string
+        sectionNumber:
+          type: string
+        sectionTitle:
+          type: string
+        appliesTo:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - sectionNumber
+        - sectionTitle
+        - appliesTo
+    EligibilityCriterion:
+      type: object
+      description: >-
+        NCI C-Code: C16112
+
+        Definition: Characteristics which are necessary to allow a subject to
+        participate in a clinical study, as outlined in the study protocol. The
+        concept covers inclusion and exclusion criteria.
+
+        Preferred Term: Study Eligibility Criterion
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        text:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        dictionary:
+          type: string
+        identifier:
+          type: string
+        category:
+          type: string
+        next:
+          type: string
+        previous:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - text
+        - identifier
+        - category
+    Encounter:
+      type: object
+      description: >-
+        NCI C-Code: CNEW
+
+        Definition: Any physical or virtual contact between two or more parties
+        involved in a study, at which an assessment or activity takes place.
+
+        Preferred Term: Study Encounter
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        environmentalSettings:
+          type: array
+          items:
+            type: string
+        contactModes:
+          type: array
+          items:
+            type: string
+        type:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        transitionEndRule:
+          type: string
+        next:
+          type: string
+        transitionStartRule:
+          type: string
+        scheduledAt:
+          type: string
+        previous:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - type
+    Endpoint:
+      type: object
+      description: >-
+        NCI C-Code: C25212
+
+        Definition: A defined variable intended to reflect an outcome of
+        interest that is statistically analyzed to address a particular research
+        question. NOTE: A precise definition of an endpoint typically specifies
+        the type of assessments made, the timing of those assessments, the
+        assessment tools used, and possibly other details, as applicable, such
+        as how multiple assessments within an individual are to be combined.
+        [After BEST Resource] (CDISC Glossary)
+
+        Preferred Term: Study Endpoint
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        text:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        dictionary:
+          type: string
+        purpose:
+          type: string
+        level:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - text
+        - purpose
+        - level
+    Estimand:
+      type: object
+      description: >-
+        NCI C-Code: C188813
+
+        Definition: A precise description of the treatment effect reflecting the
+        clinical question posed by a given clinical trial objective. It
+        summarises at a population level what the outcomes would be in the same
+        patients under different treatment conditions being compared. (ICH E9 R1
+        Addendum)
+
+        Preferred Term: Estimand
+      properties:
+        id:
+          type: string
+        populationSummary:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        analysisPopulation:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        variableOfInterest:
+          type: string
+        intercurrentEvents:
+          type: array
+          items:
+            type: string
+        interventions:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - populationSummary
+        - name
+        - description
+        - label
+        - analysisPopulation
+        - variableOfInterest
+        - intercurrentEvents
+        - interventions
+    GeographicScope:
+      type: object
+      description: >-
+        NCI C-Code: C207591
+
+        Definition: The extent or range related to the physical location of an
+        entity.
+
+        Preferred Term: Geographic Scope
+      properties:
+        id:
+          type: string
+        code:
+          type: string
+        type:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - type
+    GovernanceDate:
+      type: object
+      description: >-
+        NCI C-Code: C207595
+
+        Definition: Any of the dates associated with event milestones within a
+        clinical study's oversight and management framework.
+
+        Preferred Term: Study Governance Date
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        dateValue:
+          type: string
+        type:
+          type: string
+        geographicScopes:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - dateValue
+        - type
+        - geographicScopes
+    Identifier:
+      type: object
+      description: >-
+        NCI C-Code: C25364
+
+        Definition: One or more characters used to identify, name, or
+        characterize the nature, properties, or contents of a thing.
+
+        Preferred Term: Identifier
+      properties:
+        id:
+          type: string
+        text:
+          type: string
+        scope:
+          type: string
+      required:
+        - id
+        - text
+        - scope
+    Indication:
+      type: object
+      description: >-
+        NCI C-Code: C41184
+
+        Definition: The disease or condition the intervention will diagnose,
+        treat, prevent, cure, or mitigate.
+
+        Preferred Term: Disease/Condition Indication
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        isRareDisease:
+          type: string
+        codes:
+          type: array
+          items:
+            type: string
+        notes:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - isRareDisease
+    Ingredient:
+      type: object
+      description: >-
+        NCI C-Code: C51981
+
+        Definition: Any component that constitutes a part of a compounded
+        substance or mixture.
+
+        Preferred Term: Ingredient
+      properties:
+        id:
+          type: string
+        role:
+          type: string
+        substance:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - role
+        - substance
+    IntercurrentEvent:
+      type: object
+      description: >-
+        NCI C-Code: C188815
+
+        Definition: An event(s) occurring after treatment initiation that
+        affects either the interpretation or the existence of the measurements
+        associated with the clinical question of interest. (ICH E9 Addendum on
+        Estimands)
+
+        Preferred Term: Intercurrent Event
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        text:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        dictionary:
+          type: string
+        strategy:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - text
+        - strategy
+    InterventionalStudyDesign:
+      type: object
+      description: >-
+        NCI C-Code: CNEW
+
+        Definition: The strategy that specifies the structure of an
+        interventional trial in terms of the planned activities (including
+        timing) and statistical analysis approach intended to meet the
+        objectives of the study.
+
+        Preferred Term: Interventional Study Design
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        rationale:
+          type: string
+        activities:
+          type: array
+          items:
+            type: string
+        studyPhase:
+          type: string
+        biospecimenRetentions:
+          type: array
+          items:
+            type: string
+        studyType:
+          type: string
+        therapeuticAreas:
+          type: array
+          items:
+            type: string
+        characteristics:
+          type: array
+          items:
+            type: string
+        notes:
+          type: array
+          items:
+            type: string
+        encounters:
+          type: array
+          items:
+            type: string
+        estimands:
+          type: array
+          items:
+            type: string
+        indications:
+          type: array
+          items:
+            type: string
+        objectives:
+          type: array
+          items:
+            type: string
+        scheduleTimelines:
+          type: array
+          items:
+            type: string
+        arms:
+          type: array
+          items:
+            type: string
+        studyCells:
+          type: array
+          items:
+            type: string
+        documentVersions:
+          type: array
+          items:
+            type: string
+        elements:
+          type: array
+          items:
+            type: string
+        studyInterventions:
+          type: array
+          items:
+            type: string
+        epochs:
+          type: array
+          items:
+            type: string
+        population:
+          type: string
+        subTypes:
+          type: array
+          items:
+            type: string
+        intentTypes:
+          type: array
+          items:
+            type: string
+        model:
+          type: string
+        blindingSchema:
+          type: string
+        biomedicalConcepts:
+          type: array
+          items:
+            type: string
+        bcCategories:
+          type: array
+          items:
+            type: string
+        bcSurrogates:
+          type: array
+          items:
+            type: string
+        analysisPopulations:
+          type: array
+          items:
+            type: string
+        dictionaries:
+          type: array
+          items:
+            type: string
+        conditions:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - rationale
+        - arms
+        - studyCells
+        - epochs
+        - model
+    Masking:
+      type: object
+      description: >-
+        NCI C-Code: C191278
+
+        Definition: The mechanism used to obscure the distinctive
+        characteristics of the study intervention or procedure to make it
+        indistinguishable from a comparator. (CDISC Glossary)
+
+        Preferred Term: Masking
+      properties:
+        id:
+          type: string
+        description:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - description
+    MedicalDevice:
+      type: object
+      description: >-
+        NCI C-Code: C16830
+
+        Definition: Any instrument, apparatus, implement, machine, appliance,
+        implant, reagent for in vitro use, software, material or other similar
+        or related article, intended by the manufacturer to be used, alone or in
+        combination for, one or more specific medical purpose(s). [After
+        REGULATION (EU) 2017/745 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL
+        of 5 April 2017 on medical devices]
+
+        Preferred Term: Medical Device
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        hardwareVersion:
+          type: string
+        softwareVersion:
+          type: string
+        embeddedProduct:
+          type: string
+        sourcing:
+          type: string
+        notes:
+          type: string
+        identifiers:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - hardwareVersion
+        - softwareVersion
+        - notes
+    MedicalDeviceIdentifier:
+      type: object
+      description: >-
+        NCI C-Code: CNEW
+
+        Definition: A sequence of characters used to identify, name, or
+        characterize the medical device.
+
+        Preferred Term: Medical Device Identifier
+      properties:
+        id:
+          type: string
+        text:
+          type: string
+        scope:
+          type: string
+        type:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - text
+        - scope
+        - type
+    NarrativeContent:
+      type: object
+      description: >-
+        NCI C-Code: C207592
+
+        Definition: The container that holds an instance of unstructured text
+        and which may include objects such as tables, figures, and images.
+
+        Preferred Term: Narrative Content
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        sectionNumber:
+          type: string
+        sectionTitle:
+          type: string
+        displaySectionTitle:
+          type: string
+        displaySectionNumber:
+          type: string
+        contentItem:
+          type: string
+        previous:
+          type: string
+        next:
+          type: string
+        children:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - sectionNumber
+        - sectionTitle
+        - displaySectionTitle
+        - displaySectionNumber
+    NarrativeContentItem:
+      type: object
+      description: >-
+        NCI C-Code: CNEW
+
+        Definition: An individual item within the container that holds an
+        instance of unstructured text and which may include objects such as
+        tables, figures, and images.
+
+        Preferred Term: Narrative Content Item
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        text:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - text
+    Objective:
+      type: object
+      description: >-
+        NCI C-Code: C142450
+
+        Definition: The reason for performing a study in terms of the scientific
+        questions to be answered by the analysis of data collected during the
+        study.
+
+        Preferred Term: Study Objective
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        text:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        dictionary:
+          type: string
+        level:
+          type: string
+        endpoints:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - text
+        - level
+    ObservationalStudyDesign:
+      type: object
+      description: >-
+        NCI C-Code: CNEW
+
+        Definition: The strategy that specifies the structure of an
+        observational study in terms of the planned activities (including
+        timing) and statistical analysis approach intended to meet the
+        objectives of the study.
+
+        Preferred Term: Observational Study Design
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        rationale:
+          type: string
+        activities:
+          type: array
+          items:
+            type: string
+        studyPhase:
+          type: string
+        biospecimenRetentions:
+          type: array
+          items:
+            type: string
+        studyType:
+          type: string
+        therapeuticAreas:
+          type: array
+          items:
+            type: string
+        characteristics:
+          type: array
+          items:
+            type: string
+        notes:
+          type: array
+          items:
+            type: string
+        encounters:
+          type: array
+          items:
+            type: string
+        estimands:
+          type: array
+          items:
+            type: string
+        indications:
+          type: array
+          items:
+            type: string
+        objectives:
+          type: array
+          items:
+            type: string
+        scheduleTimelines:
+          type: array
+          items:
+            type: string
+        arms:
+          type: array
+          items:
+            type: string
+        studyCells:
+          type: array
+          items:
+            type: string
+        documentVersions:
+          type: array
+          items:
+            type: string
+        elements:
+          type: array
+          items:
+            type: string
+        studyInterventions:
+          type: array
+          items:
+            type: string
+        epochs:
+          type: array
+          items:
+            type: string
+        population:
+          type: string
+        timePerspective:
+          type: string
+        subTypes:
+          type: array
+          items:
+            type: string
+        model:
+          type: string
+        samplingMethod:
+          type: string
+        biomedicalConcepts:
+          type: array
+          items:
+            type: string
+        bcCategories:
+          type: array
+          items:
+            type: string
+        bcSurrogates:
+          type: array
+          items:
+            type: string
+        analysisPopulations:
+          type: array
+          items:
+            type: string
+        dictionaries:
+          type: array
+          items:
+            type: string
+        conditions:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - rationale
+        - arms
+        - studyCells
+        - epochs
+        - timePerspective
+        - model
+    Organization:
+      type: object
+      description: >-
+        NCI C-Code: C19711
+
+        Definition: A formalized group of persons or other organizations
+        collected together for a common purpose (such as administrative, legal,
+        political) and the infrastructure to carry out that purpose. (BRIDG)
+
+        Preferred Term: Organization
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        label:
+          type: string
+        identifier:
+          type: string
+        identifierScheme:
+          type: string
+        legalAddress:
+          type: string
+        type:
+          type: string
+        managedSites:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - label
+        - identifier
+        - identifierScheme
+        - type
+    ParameterMap:
+      type: object
+      description: |-
+        NCI C-Code: C207456
+        Definition: The paired name and value for a given parameter.
+        Preferred Term: Parameter Map
+      properties:
+        id:
+          type: string
+        tag:
+          type: string
+        reference:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - tag
+        - reference
+    PopulationDefinition:
+      type: object
+      description: |-
+        NCI C-Code: C207593
+        Definition: A concise explanation of the meaning of a population.
+        Preferred Term: Population Definition
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        includesHealthySubjects:
+          type: string
+        plannedSex:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        criteria:
+          type: array
+          items:
+            type: string
+        plannedAge:
+          type: string
+        plannedEnrollmentNumber:
+          type: string
+        plannedCompletionNumber:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - includesHealthySubjects
+    Procedure:
+      type: object
+      description: >-
+        NCI C-Code: C98769
+
+        Definition: Any activity performed by manual and/or instrumental means
+        for the purpose of diagnosis, assessment, therapy, prevention, or
+        palliative care.
+
+        Preferred Term: Procedure
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        procedureType:
+          type: string
+        code:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        studyIntervention:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - procedureType
+        - code
+    ProductOrganizationRole:
+      type: object
+      description: >-
+        NCI C-Code: CNEW
+
+        Definition: A designation that identifies the function of an
+        organization within the context of the product.
+
+        Preferred Term: Product Organization Role
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        appliesTo:
+          type: array
+          items:
+            type: string
+        code:
+          type: string
+        organization:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - code
+        - organization
+    Quantity:
+      type: object
+      description: >-
+        NCI C-Code: C25256
+
+        Definition: How much there is of something that can be measured; the
+        total amount or number.
+
+        Preferred Term: Quantity
+      properties:
+        id:
+          type: string
+        value:
+          type: string
+        unit:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - value
+    Range:
+      type: object
+      description: >-
+        NCI C-Code: C38013
+
+        Definition: The difference between the lowest and highest numerical
+        values; the limits or scale of variation.
+
+        Preferred Term: Range
+      properties:
+        id:
+          type: string
+        minValue:
+          type: string
+        maxValue:
+          type: string
+        isApproximate:
+          type: string
+        unit:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - minValue
+        - maxValue
+        - isApproximate
+    ReferenceIdentifier:
+      type: object
+      description: >-
+        NCI C-Code: CNEW
+
+        Definition: A sequence of characters used to identify, name, or
+        characterize the reference.
+
+        Preferred Term: Reference Identifier
+      properties:
+        id:
+          type: string
+        text:
+          type: string
+        scope:
+          type: string
+        type:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - text
+        - scope
+        - type
+    ResponseCode:
+      type: object
+      description: >-
+        NCI C-Code: C201347
+
+        Definition: A symbol or combination of symbols representing the response
+        to the question.
+
+        Preferred Term: Response Code
+      properties:
+        id:
+          type: string
+        isEnabled:
+          type: string
+        code:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - isEnabled
+        - code
+    ScheduleTimeline:
+      type: object
+      description: |-
+        NCI C-Code: C201348
+        Definition: A chronological schedule of planned temporal events.
+        Preferred Term: Schedule Timeline
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        entryCondition:
+          type: string
+        mainTimeline:
+          type: string
+        instances:
+          type: array
+          items:
+            type: string
+        entry:
+          type: string
+        exits:
+          type: array
+          items:
+            type: string
+        timings:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - entryCondition
+        - mainTimeline
+        - entry
+    ScheduleTimelineExit:
+      type: object
+      description: |-
+        NCI C-Code: C201349
+        Definition: To go out of or leave the schedule timeline.
+        Preferred Term: Schedule Timeline Exit
+      properties:
+        id:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+    ScheduledActivityInstance:
+      type: object
+      description: |-
+        NCI C-Code: C201350
+        Definition: A scheduled occurrence of an activity event.
+        Preferred Term: Scheduled Activity Instance
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        defaultCondition:
+          type: string
+        epoch:
+          type: string
+        activities:
+          type: array
+          items:
+            type: string
+        encounter:
+          type: string
+        timeline:
+          type: string
+        timelineExit:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+    ScheduledDecisionInstance:
+      type: object
+      description: |-
+        NCI C-Code: C201351
+        Definition: A scheduled occurrence of a decision event.
+        Preferred Term: Scheduled Decision Instance
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        defaultCondition:
+          type: string
+        epoch:
+          type: string
+        conditionAssignments:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - conditionAssignments
+    ScheduledInstance:
+      type: object
+      description: |-
+        NCI C-Code: C201299
+        Definition: A scheduled occurrence of a temporal event.
+        Preferred Term: Scheduled Instance
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        defaultCondition:
+          type: string
+        epoch:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+    Strength:
+      type: object
+      description: >-
+        NCI C-Code: CNEW
+
+        Definition: The content of an substance expressed quantitatively per
+        dosage unit, per unit of volume, or per unit of weight, according to the
+        pharmaceutical dose form of the product.
+
+        Preferred Term: Substance Strength
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        numerator:
+          type: string
+        denominator:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+    Study:
+      type: object
+      description: >-
+        NCI C-Code: C15206
+
+        Definition: A clinical study involves research using human volunteers
+        (also called participants) that is intended to add to medical knowledge.
+        There are two main types of clinical studies: clinical trials (also
+        called interventional studies) and observational studies. (CDISC
+        Glossary)
+
+        Preferred Term: Clinical Study
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        versions:
+          type: array
+          items:
+            type: string
+        documentedBy:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+    StudyAmendment:
+      type: object
+      description: >-
+        NCI C-Code: C207594
+
+        Definition: A written description of a change(s) to, or formal
+        clarification of, a study.
+
+        Preferred Term: Study Amendment
+      properties:
+        id:
+          type: string
+        number:
+          type: string
+        summary:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        geographicScopes:
+          type: array
+          items:
+            type: string
+        dateValues:
+          type: array
+          items:
+            type: string
+        impacts:
+          type: array
+          items:
+            type: string
+        enrollments:
+          type: array
+          items:
+            type: string
+        secondaryReasons:
+          type: array
+          items:
+            type: string
+        changes:
+          type: array
+          items:
+            type: string
+        previous:
+          type: string
+        primaryReason:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - number
+        - summary
+        - geographicScopes
+        - changes
+        - primaryReason
+    StudyAmendmentImpact:
+      type: object
+      description: >-
+        NCI C-Code: CNEW
+
+        Definition: The effect or consequence of an amendment on some aspect of
+        the study.
+
+        Preferred Term: Study Amendment Impact
+      properties:
+        id:
+          type: string
+        text:
+          type: string
+        isSubstantial:
+          type: string
+        type:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - text
+        - isSubstantial
+        - type
+    StudyAmendmentReason:
+      type: object
+      description: >-
+        NCI C-Code: C207457
+
+        Definition: The rationale for the change(s) to, or formal clarification
+        of, a protocol.
+
+        Preferred Term: Study Amendment Reason
+      properties:
+        id:
+          type: string
+        otherReason:
+          type: string
+        code:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - otherReason
+        - code
+    StudyArm:
+      type: object
+      description: >-
+        NCI C-Code: C174447
+
+        Definition: A planned pathway assigned to the subject as they progress
+        through the study, usually referred to by a name that reflects one or
+        more treatments, exposures, and/or controls included in the path.
+
+        Preferred Term: Study Arm
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        dataOriginDescription:
+          type: string
+        dataOriginType:
+          type: string
+        type:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        populations:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - dataOriginDescription
+        - dataOriginType
+        - type
+    StudyCell:
+      type: object
+      description: >-
+        NCI C-Code: C188810
+
+        Definition: A partitioning of a study arm into individual pieces, which
+        are associated with an epoch and any number of sequential elements
+        within that epoch.
+
+        Preferred Term: Study Design Cell
+      properties:
+        id:
+          type: string
+        arm:
+          type: string
+        epoch:
+          type: string
+        elements:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - arm
+        - epoch
+    StudyChange:
+      type: object
+      description: |-
+        NCI C-Code: CNEW
+        Definition: The act of alteration or modification to a study.
+        Preferred Term: Study Change
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        rationale:
+          type: string
+        summary:
+          type: string
+        changedSections:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - rationale
+        - summary
+        - changedSections
+    StudyCohort:
+      type: object
+      description: >-
+        NCI C-Code: C61512
+
+        Definition: A group of individuals who share a set of characteristics
+        (e.g., exposures, experiences, attributes), which logically defines a
+        population under study.
+
+        Preferred Term: Study Cohort
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        includesHealthySubjects:
+          type: string
+        plannedSex:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        criteria:
+          type: array
+          items:
+            type: string
+        plannedAge:
+          type: string
+        plannedEnrollmentNumber:
+          type: string
+        plannedCompletionNumber:
+          type: string
+        characteristics:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - includesHealthySubjects
+    StudyDefinitionDocument:
+      type: object
+      description: >-
+        NCI C-Code: CNEW
+
+        Definition: Any physical or electronic document that is related to
+        defining a study or part of a study.
+
+        Preferred Term: Study Definition Document
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        templateName:
+          type: string
+        language:
+          type: string
+        type:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        versions:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - templateName
+        - language
+        - type
+    StudyDefinitionDocumentVersion:
+      type: object
+      description: >-
+        NCI C-Code: CNEW
+
+        Definition: A representation of a particular edition or snapshot of the
+        study definition document as it exists at a particular point in time.
+
+        Preferred Term: Study Definition Document Version
+      properties:
+        id:
+          type: string
+        version:
+          type: string
+        status:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        dateValues:
+          type: array
+          items:
+            type: string
+        contents:
+          type: array
+          items:
+            type: string
+        children:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - version
+        - status
+    StudyDesign:
+      type: object
+      description: >-
+        NCI C-Code: C15320
+
+        Definition: A plan detailing how a study will be performed in order to
+        represent the phenomenon under examination, to answer the research
+        questions that have been asked, and informing the statistical approach.
+
+        Preferred Term: Study Design
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        rationale:
+          type: string
+        activities:
+          type: array
+          items:
+            type: string
+        studyPhase:
+          type: string
+        biospecimenRetentions:
+          type: array
+          items:
+            type: string
+        studyType:
+          type: string
+        therapeuticAreas:
+          type: array
+          items:
+            type: string
+        characteristics:
+          type: array
+          items:
+            type: string
+        notes:
+          type: array
+          items:
+            type: string
+        encounters:
+          type: array
+          items:
+            type: string
+        estimands:
+          type: array
+          items:
+            type: string
+        indications:
+          type: array
+          items:
+            type: string
+        objectives:
+          type: array
+          items:
+            type: string
+        scheduleTimelines:
+          type: array
+          items:
+            type: string
+        arms:
+          type: array
+          items:
+            type: string
+        studyCells:
+          type: array
+          items:
+            type: string
+        documentVersions:
+          type: array
+          items:
+            type: string
+        elements:
+          type: array
+          items:
+            type: string
+        studyInterventions:
+          type: array
+          items:
+            type: string
+        epochs:
+          type: array
+          items:
+            type: string
+        population:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - rationale
+        - arms
+        - studyCells
+        - epochs
+    StudyDesignPopulation:
+      type: object
+      description: >-
+        NCI C-Code: C142728
+
+        Definition: The population within the general population to which the
+        study results can be generalized.
+
+        Preferred Term: Study Design Population
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        includesHealthySubjects:
+          type: string
+        plannedSex:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        criteria:
+          type: array
+          items:
+            type: string
+        plannedAge:
+          type: string
+        plannedEnrollmentNumber:
+          type: string
+        plannedCompletionNumber:
+          type: string
+        cohorts:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - includesHealthySubjects
+    StudyElement:
+      type: object
+      description: >-
+        NCI C-Code: C142735
+
+        Definition: A basic building block for time within a clinical study
+        comprising the following characteristics: a description of what happens
+        to the subject during the element; a definition of the start of the
+        element; a rule for ending the element.
+
+        Preferred Term: Study Design Element
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        transitionEndRule:
+          type: string
+        studyInterventions:
+          type: array
+          items:
+            type: string
+        transitionStartRule:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+    StudyEpoch:
+      type: object
+      description: "NCI C-Code: C71738\nDefinition: A named time period defined in the protocol,\_wherein a study activity is specified and unchanging throughout the interval, to support a study-specific purpose.\nPreferred Term: Study Epoch"
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        type:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        previous:
+          type: string
+        next:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - type
+    StudyIdentifier:
+      type: object
+      description: >-
+        NCI C-Code: C83082
+
+        Definition: A sequence of characters used to identify, name, or
+        characterize the study.
+
+        Preferred Term: Study Identifier
+      properties:
+        id:
+          type: string
+        text:
+          type: string
+        scope:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - text
+        - scope
+    StudyIntervention:
+      type: object
+      description: >-
+        NCI C-Code: C207649
+
+        Definition: Any agent, device, or procedure being tested or used as a
+        reference or comparator in the conduct of a clinical trial.
+
+        Preferred Term: Study Intervention
+      properties:
+        id:
+          type: string
+        description:
+          type: string
+        name:
+          type: string
+        label:
+          type: string
+        administrations:
+          type: array
+          items:
+            type: string
+        type:
+          type: string
+        role:
+          type: string
+        codes:
+          type: array
+          items:
+            type: string
+        notes:
+          type: array
+          items:
+            type: string
+        minimumResponseDuration:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - description
+        - name
+        - label
+        - type
+        - role
+    StudyRole:
+      type: object
+      description: >-
+        NCI C-Code: CNEW
+
+        Definition: A designation that identifies the function of study
+        personnel or an organization within the context of the study.
+
+        Preferred Term: Study Role
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        label:
+          type: string
+        description:
+          type: string
+        assignedPersons:
+          type: array
+          items:
+            type: string
+        code:
+          type: string
+        masking:
+          type: string
+        organizations:
+          type: array
+          items:
+            type: string
+        appliesTo:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - label
+        - description
+        - code
+    StudySite:
+      type: object
+      description: >-
+        NCI C-Code: C80403
+
+        Definition: The location at which a study investigator conducts study
+        activities.
+
+        Preferred Term: Study Site
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        country:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - country
+    StudyTitle:
+      type: object
+      description: |-
+        NCI C-Code: C49802
+        Definition: The sponsor-defined name of the clinical study.
+        Preferred Term: Study Title
+      properties:
+        id:
+          type: string
+        text:
+          type: string
+        type:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - text
+        - type
+    StudyVersion:
+      type: object
+      description: |-
+        NCI C-Code: C188816
+        Definition: A plan at a particular point in time for a study.
+        Preferred Term: Study Version
+      properties:
+        id:
+          type: string
+        versionIdentifier:
+          type: string
+        rationale:
+          type: string
+        abbreviations:
+          type: array
+          items:
+            type: string
+        businessTherapeuticAreas:
+          type: array
+          items:
+            type: string
+        notes:
+          type: array
+          items:
+            type: string
+        dateValues:
+          type: array
+          items:
+            type: string
+        referenceIdentifiers:
+          type: array
+          items:
+            type: string
+        amendments:
+          type: array
+          items:
+            type: string
+        documentVersions:
+          type: array
+          items:
+            type: string
+        studyDesigns:
+          type: array
+          items:
+            type: string
+        studyIdentifiers:
+          type: array
+          items:
+            type: string
+        titles:
+          type: array
+          items:
+            type: string
+        criteria:
+          type: array
+          items:
+            type: string
+        narrativeContentItems:
+          type: array
+          items:
+            type: string
+        roles:
+          type: array
+          items:
+            type: string
+        organizations:
+          type: array
+          items:
+            type: string
+        administrableProducts:
+          type: array
+          items:
+            type: string
+        medicalDevices:
+          type: array
+          items:
+            type: string
+        productOrganizationRoles:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - versionIdentifier
+        - rationale
+        - studyIdentifiers
+        - titles
+    SubjectEnrollment:
+      type: object
+      description: >-
+        NCI C-Code: C37948
+
+        Definition: The act of enrolling subjects into a study. The subject will
+        have met the inclusion/exclusion criteria to participate in the trial
+        and will have signed an informed consent form. (CDISC Glossary)
+
+        Preferred Term: Subject Enrollment
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        appliesTo:
+          type: string
+        quantity:
+          type: string
+        appliesToId:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - quantity
+        - appliesToId
+    Substance:
+      type: object
+      description: >-
+        NCI C-Code: C45306
+
+        Definition: Any matter of defined composition that has discrete
+        existence, whose origin may be biological, mineral or chemical.
+
+        Preferred Term: Substance
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        codes:
+          type: array
+          items:
+            type: string
+        strengths:
+          type: array
+          items:
+            type: string
+        referenceSubstance:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - strengths
+    SyntaxTemplate:
+      type: object
+      description: >-
+        NCI C-Code: C207596
+
+        Definition: A standardized pattern used for the arrangement of words and
+        phrases to create well-formed, structured sentences.
+
+        Preferred Term: Syntax Template
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        text:
+          type: string
+        notes:
+          type: array
+          items:
+            type: string
+        dictionary:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - text
+    SyntaxTemplateDictionary:
+      type: object
+      description: >-
+        NCI C-Code: C207597
+
+        Definition: A reference source that provides a listing of valid
+        parameter names and values used in syntax template text strings.
+
+        Preferred Term: Syntax Template Dictionary
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        parameterMaps:
+          type: array
+          items:
+            type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - parameterMaps
+    Timing:
+      type: object
+      description: |-
+        NCI C-Code: C80484
+        Definition: The chronological relationship between temporal events.
+        Preferred Term: Timing
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        value:
+          type: string
+        valueLabel:
+          type: string
+        windowLabel:
+          type: string
+        windowLower:
+          type: string
+        windowUpper:
+          type: string
+        relativeToFrom:
+          type: string
+        type:
+          type: string
+        relativeToScheduledInstance:
+          type: string
+        relativeFromScheduledInstance:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - value
+        - valueLabel
+        - windowLabel
+        - windowLower
+        - windowUpper
+        - relativeToFrom
+        - type
+        - relativeFromScheduledInstance
+    TransitionRule:
+      type: object
+      description: >-
+        NCI C-Code: C82567
+
+        Definition: A guide that governs the allocation of subjects to
+        operational options at a discrete decision point or branch (e.g.,
+        assignment to a particular arm, discontinuation) within a clinical trial
+        plan.
+
+        Preferred Term: Transition Rule
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        label:
+          type: string
+        text:
+          type: string
+        instanceType:
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - label
+        - text
